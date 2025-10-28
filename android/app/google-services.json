@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530560592261",
+    "project_id": "tulutech-8bcfc",
+    "storage_bucket": "tulutech-8bcfc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530560592261:android:e3b8773b9008c8f2a97cec",
+        "android_client_info": {
+          "package_name": "com.example.tulutech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwEc_sLH0x1Eit76OWxCi_xEnAsdApuwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
