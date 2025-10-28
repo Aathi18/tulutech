@@ -81,8 +81,28 @@ Edit your config or environment file and add your Stripe Publishable Key.
 4️⃣ Run the App
 flutter run
 
-⚠️ Known Impediments
-🧩 Issue	🔧 Resolution / Status
-Stripe Secret Expiration	Stripe PaymentIntent client secrets expire quickly — manual refresh required during testing. ✅
-SDK Parameter Mismatch	Fixed by removing invalid amount and currency from SetupPaymentSheetParameters. ✅
-Flutter Cache Error	Resolved Couldn't find constructor 'SplashScreen' by running flutter clean. ✅
+lib/
+ ├── main.dart
+ ├── screens/
+ │    ├── splash_screen.dart
+ │    ├── auth/
+ │    │    ├── login_page.dart
+ │    │    └── register_page.dart
+ │    ├── home/
+ │    │    └── home_page.dart
+ │    ├── cart/
+ │         ├── cart_page.dart
+ │         ├── checkout_page.dart
+ │         └── success_page.dart
+ ├── models/
+ │    ├── product.dart
+ │    └── cart_item.dart
+ ├── providers/
+ │    ├── auth_provider.dart
+ │    ├── products_provider.dart
+ │    └── cart_provider.dart
+ └── services/
+      ├── api_service.dart
+      ├── stripe_service.dart
+      └── storage_service.dart
+
