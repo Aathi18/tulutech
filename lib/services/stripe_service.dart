@@ -15,7 +15,7 @@ class StripeService {
     
     // *** PASTE THE NEW, FRESH SETUP INTENT client_secret HERE (seti_..._secret_...) ***
     // Using a Setup Intent secret to bypass the expiring Payment Intent secret issue
-    const validClientSecret = 'pi_3SNAhd08XMrGrb4o1Ykqnn3o_secret_Fp03ffkrWFeKEzUOByADYByLb'; 
+    const validClientSecret = 'pi_3SND3o08XMrGrb4o0eU0EvEy_secret_dXyzg5ScqSMdAs2ckGmBMPEC8'; 
     
     return {
       // NOTE: We still use 'client_secret' as the key for the Payment Sheet
