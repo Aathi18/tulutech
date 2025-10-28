@@ -1,18 +1,22 @@
---- START Stripe R8/ProGuard Rules ---
+# --- START Stripe R8/ProGuard Rules ---
 
-Rules for the core Stripe Android SDK (essential for payment processing)
+# Rules for the core Stripe Android SDK (essential for payment processing)
+-keep class com.stripe.android.** { *; }
+-dontwarn com.stripe.android.**
 
--keep public class com.stripe.android.** { ; }
--dontwarn com.stripe.android.*
+# Rules specific to Push Provisioning components (which were causing the build failure)
+-keep class com.stripe.android.pushProvisioning.** { *; }
+-dontwarn com.stripe.android.pushProvisioning.**
+-keep class com.reactnativestripesdk.** { *; }
+-dontwarn com.reactnativestripesdk.**
 
-Rules specific to Push Provisioning components (which were causing the build failure)
+# Rules for common libraries that Stripe may reference (e.g., Google Wallet for payments)
+-keep class com.google.android.gms.wallet.** { *; }
+-dontwarn com.google.android.gms.wallet.**
 
--keep class com.reactnativestripesdk.** { ; }
--dontwarn com.reactnativestripesdk.*
+# Additional rules for Gson (Stripe uses it internally; prevents serialization crashes)
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
 
-Rules for common libraries that Stripe may reference
-
--keep class com.google.android.gms.wallet.** { ; }
--dontwarn com.google.android.gms.wallet.*
-
---- END Stripe R8/ProGuard Rules ---
+# --- END Stripe R8/ProGuard Rules ---
